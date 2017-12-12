@@ -1,27 +1,13 @@
-<%= form_with(model: building, local: true) do |form| %>
-  <% if building.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(building.errors.count, "error") %> prohibited this building from being saved:</h2>
+<%= simple_form_for(@building) do |b| %>
+    <%= b.error_notification %>
 
-      <ul>
-      <% building.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+    <div class="form-inputs">
+      <%= b.association :room %>
+      <%= b.input :title %>
+      <%= b.input :code %>
     </div>
-  <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :building_title %>
-  </div>
-
-  <div class="field">
-    <%= form.label :code %>
-    <%= form.text_field :code, id: :building_code %>
-  </div>
-
-  <div class="form-actions">
-    <%= form.button :magic_submit, cancel: buildings_path %>
-  </div>
+    <div class="form-actions">
+      <%= b.button :submit, cancel: buildings_path %>
+    </div>
 <% end %>
