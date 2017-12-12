@@ -21,7 +21,7 @@
     <%= form.text_field :code, id: :building_code %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-actions">
+    <%= form.button :magic_submit, cancel: buildings_path %>
   </div>
 <% end %>
