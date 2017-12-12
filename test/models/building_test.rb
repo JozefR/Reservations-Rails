@@ -7,6 +7,11 @@
 #  code       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  room_id    :integer
+#
+# Indexes
+#
+#  index_buildings_on_room_id  (room_id)
 #
 
 require 'test_helper'
