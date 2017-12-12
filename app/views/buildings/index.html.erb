@@ -16,8 +16,15 @@
       <tr>
         <td><%= building.title %></td>
         <td><%= building.code %></td>
-        <td><%= link_to 'Show', building %></td>
-        <td><%= link_to 'Edit', edit_building_path(building) %></td>
+        <td>
+          <%= link_to building, class: 'btn btn-default' do %>
+              <%= fa_icon 'info-circle', text: 'Show' %>
+          <% end %>
+        
+        <td>
+          <%= link_to 'Edit', edit_building_path(building) %>
+        </td>
+
         <td><%= link_to 'Destroy', building, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -26,4 +33,7 @@
 
 <br>
 
-<%= link_to 'New Building', new_building_path %>
+<%= link_to new_building_path, class: 'btn btn-success' do%>
+
+    <%= fa_icon 'plus', text: 'New Building' %>
+<% end %>
