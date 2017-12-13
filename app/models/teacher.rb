@@ -11,4 +11,6 @@
 #
 
 class Teacher < ApplicationRecord
+  has_many :teacher_assignment
+  has_many :courses, throught: :teacher_assignment
 end
