@@ -17,4 +17,8 @@
 class Room < ApplicationRecord
   belongs_to :building
   has_many :lessons
+
+  validates :title, presence: true, length: {minimum: 3, maximum: 30}
+  validates :code, presence: true, length: {minimum: 2, maximum: 20}
+  validates :building_id, presence: true
 end
