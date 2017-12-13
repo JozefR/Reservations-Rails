@@ -10,6 +10,7 @@
 #
 
 class Course < ApplicationRecord
+  has_many :lessons
   has_many :teacher_assignment
   has_many :teachers, through: :teacher_assignment
   has_many :student_assignment
