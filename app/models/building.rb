@@ -15,7 +15,7 @@
 #
 
 class Building < ApplicationRecord
-  belongs_to :room
+  has_many :rooms
 
   validates :title, presence: true, length: {minimum: 3, maximum: 30}
   validates :code, presence: true, length: {minimum: 2, maximum: 20}

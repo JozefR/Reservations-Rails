@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: lessons
+#
+#  id         :integer          not null, primary key
+#  start_at   :datetime
+#  end_at     :datetime
+#  durration  :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_at: MyString
+  end_at: MyString
+  durration: MyString
+
+two:
+  start_at: MyString
+  end_at: MyString
+  durration: MyString
