@@ -9,10 +9,12 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  room_id    :integer
+#  teacher_id :integer
 #
 # Indexes
 #
-#  index_lessons_on_room_id  (room_id)
+#  index_lessons_on_room_id     (room_id)
+#  index_lessons_on_teacher_id  (teacher_id)
 #
 
 require 'test_helper'
