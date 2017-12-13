@@ -10,9 +10,11 @@
 #  updated_at :datetime         not null
 #  room_id    :integer
 #  teacher_id :integer
+#  course_id  :integer
 #
 # Indexes
 #
+#  index_lessons_on_course_id   (course_id)
 #  index_lessons_on_room_id     (room_id)
 #  index_lessons_on_teacher_id  (teacher_id)
 #
