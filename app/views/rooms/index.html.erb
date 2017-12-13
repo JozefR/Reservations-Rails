@@ -7,6 +7,7 @@
     <tr>
       <th>Title</th>
       <th>Code</th>
+      <th>Building</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,6 +17,7 @@
       <tr>
         <td><%= room.title %></td>
         <td><%= room.code %></td>
+        <td><%= room.building.title if room.building.present? %></td>
         <td><%= link_to 'Show', room %></td>
         <td><%= link_to 'Edit', edit_room_path(room) %></td>
         <td><%= link_to 'Destroy', room, method: :delete, data: { confirm: 'Are you sure?' } %></td>

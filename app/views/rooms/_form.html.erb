@@ -2,11 +2,12 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+    <%= f.association :building %>
     <%= f.input :title %>
     <%= f.input :code %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, cancel: rooms_path%>
   </div>
 <% end %>
