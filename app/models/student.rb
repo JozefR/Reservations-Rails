@@ -11,4 +11,6 @@
 #
 
 class Student < ApplicationRecord
+  has_many :student_assignment
+  has_many :courses, throught: :student_assignment
 end

@@ -12,4 +12,6 @@
 class Course < ApplicationRecord
   has_many :teacher_assignment
   has_many :teachers, through: :teacher_assignment
+  has_many :student_assignment
+  has_many :students, through: :student_assignment
 end
