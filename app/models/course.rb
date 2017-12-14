@@ -23,4 +23,7 @@ class Course < ApplicationRecord
             default: :czech, scope: true, predicates: true
   enumerize :StudyType, in: { full_time: 1, part_time: 2},
             default: :full_time, scope: true, predicates: true
+
+  validates :title, presence: true, length: {minimum: 3, maximum: 30}
+  validates :code, presence: true, length: {minimum: 2, maximum: 20}
 end
