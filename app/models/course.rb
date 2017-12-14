@@ -8,6 +8,7 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  language   :integer
+#  StudyType  :integer
 #
 
 class Course < ApplicationRecord
@@ -20,4 +21,6 @@ class Course < ApplicationRecord
   extend Enumerize
   enumerize :language, in: { czech: 1, english: 2},
             default: :czech, scope: true, predicates: true
+  enumerize :StudyType, in: { full_time: 1, part_time: 2},
+            default: :full_time, scope: true, predicates: true
 end
