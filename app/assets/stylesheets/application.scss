@@ -17,3 +17,59 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+
+html,body {
+  height: 100%;
+  font-family: 'Lato', 'Arial', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  flex: 1 0 auto;
+}
+
+h1 {
+  font-size: 3em;
+  text-align: left;
+}
+
+.page-header{
+  padding-top: 40px;
+  margin-bottom: 0px;
+}
+
+.well {
+  color: rgb(177, 46, 46);
+}
+
+.tableHeader{
+  background-color: #2c3e50;
+  color: white;
+}
+
+.footColor{
+  background-color: #efefef;
+}
+
+.footer-nav {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  float: left;
+}
+
+.soc-links {
+  list-style: none;
+  float: right;
+}
+
+.footer-nav li,
+.soc-links li {
+  display: inline-block;
+  margin-right: 16px;
+  margin-top: 10px;
+}
