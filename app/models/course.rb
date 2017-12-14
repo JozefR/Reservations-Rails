@@ -7,6 +7,7 @@
 #  code       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  language   :integer
 #
 
 class Course < ApplicationRecord
@@ -15,4 +16,8 @@ class Course < ApplicationRecord
   has_many :teachers, through: :teacher_assignment
   has_many :student_assignment
   has_many :students, through: :student_assignment
+
+  extend Enumerize
+  enumerize :language, in: { czech: 1, english: 2},
+            default: :czech, scope: true, predicates: true
 end

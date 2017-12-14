@@ -7,6 +7,7 @@
 #  code       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  language   :integer
 #
 
 require 'test_helper'

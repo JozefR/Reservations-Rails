@@ -2,7 +2,7 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.association :building %>
+    <%= f.association :building, as: :check_boxes %>
     <%= f.input :title %>
     <%= f.input :code %>
   </div>
