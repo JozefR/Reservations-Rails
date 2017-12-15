@@ -12,6 +12,10 @@
 class Building < ApplicationRecord
   has_many :rooms
 
-  validates :title, presence: true, length: {minimum: 3, maximum: 30}
-  validates :code, presence: true, length: {minimum: 2, maximum: 20}
+  validates :title, presence: true,
+            uniqueness: { case_sensitive: false},
+            length: {minimum: 3, maximum: 30}
+  validates :code, presence: true,
+            uniqueness: { case_sensitive: false},
+            length: {minimum: 2, maximum: 10}
 end
