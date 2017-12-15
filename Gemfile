@@ -55,8 +55,6 @@ group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'annotate', '~> 2.7', '>= 2.7.2'
   gem 'web-console', '>= 3.3.0'
-  gem 'erd'
-  gem 'rails-erd'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
