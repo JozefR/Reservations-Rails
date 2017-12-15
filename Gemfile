@@ -40,6 +40,7 @@ gem 'bh', '~> 1.3', '>= 1.3.6'
 
 gem 'simple_form', '~> 3.5'
 gem 'enumerize', '~> 2.1', '>= 2.1.2'
+gem 'bootswatch-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
