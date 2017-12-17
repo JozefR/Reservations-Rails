@@ -20,13 +20,21 @@
     <div class="list-group">
     <% @buildings.each do |building| %>
 
-      <a class="list-group-item" href="#">
-        <h4><%= building.title%></h4>
+      <a class="list-group-item">
+        <h4><%= building.title%> </h4>
+
       </a>
-        <ul><li><a href="today.html">Todays lectures</a></li></ul>
+
+        <ul>
+          <li>
+            <%= link_to 'Rooms', rooms_path(building_id: building.id) %>
+          </li>
+          <li>
+            <a href="today.html">Todays lectures</a>
+          </li>
+        </ul>
     <% end %>
     </div>
-
 
   </div>
 

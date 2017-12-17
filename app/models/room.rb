@@ -20,5 +20,8 @@ class Room < ApplicationRecord
 
   validates :title, presence: true, length: {minimum: 3, maximum: 30}
   validates :code, presence: true, length: {minimum: 2, maximum: 20}
-  validates :building_id, presence: true
+
+  scope :with_building_id, -> (building_id) {
+    where(building_id: building_id)
+  }
 end
