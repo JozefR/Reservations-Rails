@@ -25,7 +25,7 @@ class Lesson < ApplicationRecord
   belongs_to :course
 
   validates :durration, presence: true
-  validates :room_id, presence: true
-  validates :teacher_id, presence: true
-  validates :course_id, presence: true
+  #validates :room_id, presence: true
+  #validates :teacher_id, presence: true
+  #validates :course_id, presence: true
 end

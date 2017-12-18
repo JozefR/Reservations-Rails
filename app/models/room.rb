@@ -17,10 +17,10 @@
 class Room < ApplicationRecord
   belongs_to :building
   has_many :lessons
-
+=begin
   validates :title, presence: true, length: {minimum: 3, maximum: 30}
   validates :code, presence: true, length: {minimum: 2, maximum: 20}
-
+=end
   scope :with_building_id, -> (building_id) {
     where(building_id: building_id)
   }

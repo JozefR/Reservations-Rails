@@ -13,7 +13,7 @@
 
 class Student < ApplicationRecord
   has_many :student_assignment
-  has_many :courses, throught: :student_assignment
+  has_many :courses, through: :student_assignment
 
   extend Enumerize
   enumerize :StudyType, in: { full_time: 1, part_time: 2},

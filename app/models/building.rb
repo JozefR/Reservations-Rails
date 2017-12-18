@@ -10,12 +10,13 @@
 #
 
 class Building < ApplicationRecord
-  has_many :rooms
-
+  has_many :rooms, dependent: :destroy
+=begin
   validates :title, presence: true,
             uniqueness: { case_sensitive: false},
             length: {minimum: 3, maximum: 30}
   validates :code, presence: true,
             uniqueness: { case_sensitive: false},
             length: {minimum: 2, maximum: 10}
+=end
 end
