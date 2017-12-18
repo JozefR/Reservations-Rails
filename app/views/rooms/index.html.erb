@@ -15,7 +15,7 @@
 
     <ol class="breadcrumb">
       <li class="breadcrumb-item">
-        <a href="index">Home</a>
+        <%= link_to 'Home', buildings_path %>
       </li>
       <li class="breadcrumb-item active">Rooms</li>
     </ol>
@@ -27,7 +27,7 @@
           <% @rooms.each do |room| %>
             <div class="caption">
               <h3>
-                <%= link_to room.title, edit_room_path(room) %>
+                <%= link_to room.title, lessons_path(room_id: room.id)  %>
               </h3>
             </div>
           <% end %>

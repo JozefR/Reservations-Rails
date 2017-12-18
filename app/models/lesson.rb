@@ -28,4 +28,8 @@ class Lesson < ApplicationRecord
   #validates :room_id, presence: true
   #validates :teacher_id, presence: true
   #validates :course_id, presence: true
+
+  scope :with_room_id, -> (room_id) {
+  where(room_id: room_id)
+  }
 end

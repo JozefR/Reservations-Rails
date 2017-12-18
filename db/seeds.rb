@@ -12,8 +12,8 @@ if Building.where(code: 'CLS').count == 0
    retro = Building.create!(title: 'Retro', code: 'RTR')
 
    par1_1 = Room.create!(title: 'Par 1.1', code: '1.1', building_id: classic.id)
-   par1_2 = Room.create!(title: 'Par 1.1', code: '1.1', building_id: classic.id)
-   par1_3 = Room.create!(title: 'Par 1.1', code: '1.1', building_id: classic.id)
+   par1_2 = Room.create!(title: 'Par 1.2', code: '1.1', building_id: classic.id)
+   par1_3 = Room.create!(title: 'Par 1.3', code: '1.1', building_id: classic.id)
 
    ror33 = Room.create!(title: 'ROR 33', code: '33', building_id: retro.id)
    ror34 = Room.create!(title: 'ROR 34', code: '34', building_id: retro.id)
@@ -40,11 +40,11 @@ if Building.where(code: 'CLS').count == 0
    teacherAssignment2 = TeacherAssignment.create!(course_id: aodCourse.id, teacher_id: danaTeacher.id)
    teacherAssignment3 = TeacherAssignment.create!(course_id: webCourse.id, teacher_id: feriTeacher.id)
 
-   lesson = Lesson.create!(durration: 2, room_id: par1_1.id, teacher_id: bobTeacher.id, course_id: prCourse.id)
-   lesson2 = Lesson.create!(durration: 1.30, room_id: par1_2.id, teacher_id: danaTeacher.id, course_id: aodCourse.id)
-   lesson3 = Lesson.create!(durration: 1, room_id: par1_3.id, teacher_id: feriTeacher.id, course_id: webCourse.id)
-   lesson4 = Lesson.create!(durration: 2, room_id: ror33.id, teacher_id: danaTeacher.id, course_id: prCourse.id)
-   lesson5 = Lesson.create!(durration: 2, room_id: ror34.id, teacher_id: bobTeacher.id, course_id: prCourse.id)
-   lesson6 = Lesson.create!(durration: 2, room_id: ror35.id, teacher_id: bobTeacher.id, course_id: prCourse.id)
+   lesson = Lesson.create!(start_at: '2017-12-18 13:07:00', end_at: '2017-12-18 13:07:00', durration: 2, room_id: par1_1.id, teacher_id: bobTeacher.id, course_id: prCourse.id)
+   lesson2 = Lesson.create!(start_at: '2017-12-18 14:07:02', end_at: '2017-12-18 13:07:00', durration: 1.30, room_id: par1_2.id, teacher_id: danaTeacher.id, course_id: aodCourse.id)
+   lesson3 = Lesson.create!(start_at: '2017-12-18 15:07:02', end_at: '2017-12-18 13:07:00', durration: 1, room_id: par1_3.id, teacher_id: feriTeacher.id, course_id: webCourse.id)
+   lesson4 = Lesson.create!(start_at: '2017-12-18 16:07:02', end_at: '2017-12-18 13:07:00', durration: 2, room_id: ror33.id, teacher_id: danaTeacher.id, course_id: prCourse.id)
+   lesson5 = Lesson.create!(start_at: '2017-12-18 17:07:02', end_at: '2017-12-18 13:07:00', durration: 2, room_id: ror34.id, teacher_id: bobTeacher.id, course_id: prCourse.id)
+   lesson6 = Lesson.create!(start_at: '2017-12-18 18:07:02', end_at: '2017-12-18 13:07:00', durration: 2, room_id: ror35.id, teacher_id: bobTeacher.id, course_id: prCourse.id)
 end
 
